@@ -7,10 +7,7 @@ public class lista20 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // ============================
-        // Funções sem parâmetro
-        // ============================
-
+       
         System.out.println("\n1 – Repetindo uma saudação:");
         saudacao();
 
@@ -26,9 +23,7 @@ public class lista20 {
         System.out.println("\n5 – Mostrando os primeiros meses do ano:");
         mesesDoAno();
 
-        // ============================
-        // Funções com parâmetro (interativas)
-        // ============================
+       
 
         System.out.println("\n6 – Verificando divisibilidade por 5:");
         System.out.print("Digite um número: ");
@@ -70,9 +65,6 @@ public class lista20 {
         sc.close();
     }
 
-    // ============================
-    // Funções sem parâmetro
-    // ============================
 
     public static void saudacao() {
         for (int i = 0; i < 5; i++) {
@@ -109,9 +101,7 @@ public class lista20 {
         }
     }
 
-    // ============================
-    // Funções com parâmetro
-    // ============================
+
 
     public static void divisivelPor5(int numero) {
         if (numero % 5 == 0) {
