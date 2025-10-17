@@ -1,143 +1,143 @@
 package primeiroProjeto;
 
+import java.util.Scanner;
+
 public class lista20 {
 
     public static void main(String[] args) {
- 
+        Scanner sc = new Scanner(System.in);
 
-        
-        repetirSaudacao();
+        // ============================
+        // Funções sem parâmetro
+        // ============================
 
+        System.out.println("\n1 – Repetindo uma saudação:");
+        saudacao();
+
+        System.out.println("\n2 – Desenhando um retângulo:");
         desenharRetangulo();
 
-        imprimirMultiplos5();
+        System.out.println("\n3 – Imprimindo múltiplos de 5:");
+        multiplosDe5();
 
+        System.out.println("\n4 – Exibindo contagem crescente:");
+        contagem();
 
-        contagemCrescente();
+        System.out.println("\n5 – Mostrando os primeiros meses do ano:");
+        mesesDoAno();
 
- 
-        mostrarMeses();
+        // ============================
+        // Funções com parâmetro (interativas)
+        // ============================
 
-   
+        System.out.println("\n6 – Verificando divisibilidade por 5:");
+        System.out.print("Digite um número: ");
+        int numero = sc.nextInt();
+        divisivelPor5(numero);
 
-     
-        verificarDivisivelPor5(10);
-        verificarDivisivelPor5(7);
+        System.out.println("\n7 – Mensagem de despedida:");
+        System.out.print("Digite seu nome: ");
+        String nome = sc.next();
+        despedida(nome);
 
-   
-        despedida("DANILO ");
+        System.out.println("\n8 – Unindo nomes:");
+        System.out.print("Digite o primeiro nome: ");
+        String primeiroNome = sc.next();
+        System.out.print("Digite o sobrenome: ");
+        String sobrenome = sc.next();
+        nomeCompleto(primeiroNome, sobrenome);
 
-     
-        unirNomes("DANILO", "BRANT");
+        System.out.println("\n9 – Verificando maior que 100:");
+        System.out.print("Digite um número inteiro: ");
+        int numero2 = sc.nextInt();
+        maiorQue100(numero2);
 
-   
-        verificarMaiorQue100(50);
-        verificarMaiorQue100(150);
+        System.out.println("\n10 – Classificando velocidade:");
+        System.out.print("Digite a velocidade: ");
+        int velocidade = sc.nextInt();
+        classificarVelocidade(velocidade);
 
-    
-        classificarVelocidade(30);
-        classificarVelocidade(60);
-        classificarVelocidade(100);
+        System.out.println("\n11 – Saudação por dia da semana:");
+        System.out.print("Digite o dia da semana: ");
+        String dia = sc.next();
+        saudacaoDia(dia);
 
-        
-        saudacaoDiaSemana("segunda");
-        saudacaoDiaSemana("sexta");
+        System.out.println("\n12 – Verificando situação de estoque:");
+        System.out.print("Digite a quantidade em estoque: ");
+        int estoque = sc.nextInt();
+        verificarEstoque(estoque);
 
-        verificarEstoque(3);
-        verificarEstoque(7);
-        verificarEstoque(12);
+        sc.close();
     }
 
-    
+    // ============================
+    // Funções sem parâmetro
+    // ============================
 
-    // 1
-    public static void repetirSaudacao() {
-        System.out.println("1 – Repetindo uma saudação");
+    public static void saudacao() {
         for (int i = 0; i < 5; i++) {
             System.out.println("Bom dia!");
         }
-        System.out.println();
     }
 
-    // 2
     public static void desenharRetangulo() {
-        System.out.println("2 – Desenhando um retângulo");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 5; j++) {
-                System.out.print("* ");
+                System.out.print("*");
             }
             System.out.println();
         }
-        System.out.println();
     }
 
-    // 3
-    public static void imprimirMultiplos5() {
-        System.out.println("3 – Imprimindo múltiplos de 5");
+    public static void multiplosDe5() {
         for (int i = 5; i <= 25; i += 5) {
             System.out.println(i);
         }
-        System.out.println();
     }
 
-    // 4
-    public static void contagemCrescente() {
-        System.out.println("4 – Exibindo contagem crescente");
+    public static void contagem() {
         for (int i = 1; i <= 8; i++) {
-            System.out.print(i + " ");
+            System.out.println(i);
         }
-        System.out.println("Pronto!\n");
+        System.out.println("Pronto!");
     }
 
-    // 5
-    public static void mostrarMeses() {
-        System.out.println("5 – Mostrando os meses do ano");
+    public static void mesesDoAno() {
         String[] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"};
         for (String mes : meses) {
             System.out.println(mes);
         }
-        System.out.println();
     }
 
-    
+    // ============================
+    // Funções com parâmetro
+    // ============================
 
-    // 1
-    public static void verificarDivisivelPor5(int numero) {
-        System.out.println("1 – Verificando divisibilidade de " + numero);
+    public static void divisivelPor5(int numero) {
         if (numero % 5 == 0) {
             System.out.println(numero + " é divisível por 5");
         } else {
             System.out.println(numero + " não é divisível por 5");
         }
-        System.out.println();
     }
 
-    // 2
     public static void despedida(String nome) {
-        System.out.println("2 – Mensagem de despedida");
-        System.out.println("Até logo, " + nome + "!\n");
+        System.out.println("Até logo, " + nome + "!");
     }
 
-    // 3
-    public static void unirNomes(String primeiroNome, String sobrenome) {
-        System.out.println("3 – Unindo nomes");
-        System.out.println(primeiroNome + " " + sobrenome + "\n");
+    public static void nomeCompleto(String primeiroNome, String sobrenome) {
+        System.out.println("Nome completo: " + primeiroNome + " " + sobrenome);
     }
 
-    // 4
-    public static void verificarMaiorQue100(int numero) {
-        System.out.println("4 – Verificando se " + numero + " é maior que 100");
+    public static void maiorQue100(int numero) {
         if (numero > 100) {
             System.out.println(numero + " é maior que 100");
         } else {
             System.out.println(numero + " não é maior que 100");
         }
-        System.out.println();
     }
 
-    // 5
     public static void classificarVelocidade(int velocidade) {
-        System.out.println("5 – Classificando velocidade: " + velocidade);
         if (velocidade < 40) {
             System.out.println("Lenta");
         } else if (velocidade <= 80) {
@@ -145,18 +145,13 @@ public class lista20 {
         } else {
             System.out.println("Rápida");
         }
-        System.out.println();
     }
 
-    // 6
-    public static void saudacaoDiaSemana(String dia) {
-        System.out.println("6 – Saudação por dia da semana");
-        System.out.println("Tenha uma ótima " + dia + "!\n");
+    public static void saudacaoDia(String dia) {
+        System.out.println("Tenha uma ótima " + dia + "!");
     }
 
-    // 7
     public static void verificarEstoque(int quantidade) {
-        System.out.println("7 – Verificando situação de estoque: " + quantidade);
         if (quantidade >= 10) {
             System.out.println("Estoque suficiente");
         } else if (quantidade >= 5) {
@@ -164,6 +159,5 @@ public class lista20 {
         } else {
             System.out.println("Estoque crítico");
         }
-        System.out.println();
     }
 }
